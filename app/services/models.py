@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import Column, Integer, String, DateTime, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
 
@@ -11,3 +11,9 @@ class FileUpload(Base):
     filetype = Column(String, nullable=False)
     filepath = Column(String, nullable=False)
     upload_time = Column(DateTime, default=datetime.utcnow)
+    is_verified = Column(Boolean, nullable=True)  # New field
+    verification_message = Column(String, nullable=True)  # New field
+
+
+
+   

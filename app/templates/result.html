@@ -2,10 +2,22 @@
 <html>
 <head>
   <title>Upload Result</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h2>Upload Successful!</h2>
-  <p>File <strong>{{ filename }}</strong> ({{ filetype }}) has been uploaded.</p>
-  <a href="/">Upload another</a>
+<body class="bg-[#f8f8f8] text-gray-800">
+  <div class="max-w-3xl mx-auto mt-10 px-4">
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <h2 class="text-lg font-semibold mb-4">Upload Result</h2>
+      <p>File <strong>{{ filename }}</strong> ({{ filetype }}) has been uploaded.</p>
+      <p class="mt-2">
+        {% if is_verified %}
+          <span class="text-green-600">✅ Document Verified</span>
+        {% else %}
+          <span class="text-red-600">❌ Document Not Verified: {{ message }}</span>
+        {% endif %}
+      </p>
+      <a href="/" class="mt-4 inline-block bg-[#ff6f61] hover:bg-[#ff5a4a] text-white px-4 py-2 rounded transition">Upload another</a>
+    </div>
+  </div>
 </body>
 </html>

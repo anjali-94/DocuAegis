@@ -1,0 +1,46 @@
+# Python virtual environments
+venv/
+.venv/
+env/
+ENV/
+*/venv/
+*/.venv/
+*/env/
+*/ENV/
+
+# Environment variables
+.env
+.env.*
+*.env
+
+# Python compiled files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+
+# Python package and build artifacts
+*.egg
+*.egg-info/
+dist/
+build/
+*.egg-info
+.eggs/
+
+# Python cache and temporary files
+.pytest_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.tox/
+.nox/
+.cache/
+
+
+
+# Python profiling and logs
+*.log
+*.prof

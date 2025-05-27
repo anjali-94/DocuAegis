@@ -18,4 +18,22 @@ uvicorn==0.34.2
 fastapi
 uvicorn
 jinja2
+fastapi
+uvicorn
+jinja2
+pytesseract
+opencv-python
+pillow
+pydantic
+python-multipart
+numpy
+requests
+python-jose[cryptography]
+passlib[bcrypt]
+fastapi
+uvicorn
+python-multipart
+sqlalchemy
+jinja2
+aiofiles
 

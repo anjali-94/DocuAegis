@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f8f8f8] text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-teal-600 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold">DocuVerify Dashboard</h1>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="max-w-3xl mx-auto mt-10 px-4">
+
+    <!-- Upload Form -->
+    <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+      <h2 class="text-lg font-semibold mb-4">Upload a Document</h2>
+      <form action="/upload" method="post" enctype="multipart/form-data" class="flex flex-col sm:flex-row items-center gap-4">
+
+        <input type="file" name="file" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx,.txt" required class="border border-gray-300 rounded p-2 w-full sm:w-auto" >
+        
+        <button type="submit" class="bg-[#ff6f61] hover:bg-[#ff5a4a] text-white px-6 py-2 rounded transition">
+          Upload
+        </button>
+      </form>
+    </div>
+
+    <!-- Verification Status -->
+    <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+      <h2 class="text-lg font-semibold mb-2">Document Verification Status</h2>
+      <div class="border rounded p-4 text-center bg-gray-100 text-green-600 font-medium">
+        ✅ Verified
+        <!-- or ❌ Not Verified -->
+      </div>
+    </div>
+
+    <!-- Verified Documents List -->
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <h2 class="text-lg font-semibold mb-4">List of Verified Documents</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Document_1.pdf</li>
+        <li>Document_2.pdf</li>
+        <li>Document_3.pdf</li>
+        <!-- Dynamically list more documents here -->
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
